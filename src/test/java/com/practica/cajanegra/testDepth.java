@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-public class testDept {
+public class testDepth {
 	BinaryTree<String> arbol;
 	
 	@BeforeEach
@@ -15,7 +15,7 @@ public class testDept {
 	}
 	@Test
 	void testC1() {
-		assertEquals(arbol.depth(),1);
+		assertEquals(1,arbol.depth());
 	}
 	@Test
 	void testC2() {
@@ -24,11 +24,11 @@ public class testDept {
 		
 		arbol.insert("1", arbol.getRoot(), false);
 		
-		assertEquals(arbol.depth(),3);
+		assertEquals(3,arbol.depth());
 	}
 	@Test 
-	void testNC(){
+	void testC3(){
 		arbol.remove(arbol.getRoot());
-		assertEquals(arbol.depth(),0);
+		assertEquals(0,arbol.depth());
 	}
 }

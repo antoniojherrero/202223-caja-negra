@@ -10,17 +10,17 @@ public class testConstructorBinaryTree {
 	@Test
 	void testT1C1() {
 		String contenido = "1";
-		assertNotEquals(new BinaryTree<String>(contenido),null);
+		assertNotEquals(null, new BinaryTree<String>(contenido));
 	}
 	@Test
 	void testT1C2() {
 		String contenido = "A";
-		assertNotEquals(new BinaryTree<String>(contenido),null);
+		assertNotEquals(null, new BinaryTree<String>(contenido));
 	}
 	@Test
 	void testT1C3() {
 		String contenido = "a";
-		assertNotEquals(new BinaryTree<String>(contenido),null);
+		assertNotEquals(null, new BinaryTree<String>(contenido));
 	}
 	@Test
 	void testT1NC() {
@@ -32,6 +32,8 @@ public class testConstructorBinaryTree {
 	@Test
 	void testNT1C1() {
 		int contenido = 1;
-		assertNotEquals(new BinaryTree<Integer>(contenido),null);
+		assertThrows(java.lang.IllegalArgumentException.class, ()->{
+			new BinaryTree<Integer>(contenido);
+		});
 	}
 }
