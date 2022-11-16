@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 public class testDepthAtNode {
 	BinaryTree<String> arbol1;
 	BinaryTree<String> arbol2;
-	Node nodoA2;
-	Node nodoA4;
+	Node<String> nodoA2;
+	Node<String> nodoA4;
 	@BeforeEach
 	void setUp() {
 		
