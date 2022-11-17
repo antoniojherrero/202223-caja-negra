@@ -9,8 +9,8 @@ public class testEquals {
 	@BeforeEach
 	void setUp() {
 		arbol = new BinaryTree<String>("1");
-		Node<String> nodo = arbol.insert("1", arbol.getRoot(), false);
-		arbol.insert("1", arbol.getRoot(), true);
+		Node<String> nodo = arbol.insert("1", arbol.getRoot(), true);
+		arbol.insert("1", arbol.getRoot(), false);
 		arbol.insert("1", nodo, false);
 		arbol.insert("1", nodo, true);
 	}
