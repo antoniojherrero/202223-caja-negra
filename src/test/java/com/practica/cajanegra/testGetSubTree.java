@@ -25,4 +25,16 @@ public class testGetSubTree {
 		assertEquals(hijoD, arbol.getSubTree(nodo1).getRoot().getRightChild());
 		assertEquals(hijoI, arbol.getSubTree(nodo1).getRoot().getLeftChild());
 	}
+	@Test
+	void testNC1() {
+		Node nodoA2 = new Node<String>("1");
+		assertThrows(java.lang.Exception.class, ()->{
+			arbol.getSubTree(nodoA2);
+		});
+	}@Test
+	void testNC2() {
+		assertThrows(java.lang.Exception.class, ()->{
+			arbol.getSubTree(null);
+		});
+	}
 }
