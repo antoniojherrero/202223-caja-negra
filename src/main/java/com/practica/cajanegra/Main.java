@@ -6,7 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		BinaryTree<String> arbol1 = new BinaryTree<String>("1");
 		
-		System.out.println(arbol1.equals(null));
+		System.out.println(arbol1.depth());
 	}
 
 }

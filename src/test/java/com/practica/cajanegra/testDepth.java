@@ -15,7 +15,7 @@ public class testDepth {
 	}
 	@Test
 	void testC1() {
-		assertEquals(1,arbol.depth());
+		assertEquals(0,arbol.depth());
 	}
 	@Test
 	void testC2() {
@@ -24,11 +24,13 @@ public class testDepth {
 		
 		arbol.insert("1", arbol.getRoot(), false);
 		
-		assertEquals(3,arbol.depth());
+		assertEquals(2,arbol.depth());
 	}
 	@Test 
 	void testC3(){
 		arbol.remove(arbol.getRoot());
-		assertEquals(0,arbol.depth());
+		assertThrows(java.lang.Exception.class, ()->{
+			arbol.depth();
+		});
 	}
 }
