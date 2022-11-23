@@ -27,7 +27,7 @@ public class testGetSubTree {
 	}
 	@Test
 	void testNC1() {
-		Node nodoA2 = new Node<String>("1");
+		Node<String> nodoA2 = new Node<String>("1");
 		assertThrows(java.lang.Exception.class, ()->{
 			arbol.getSubTree(nodoA2);
 		});
