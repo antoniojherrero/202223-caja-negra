@@ -44,4 +44,10 @@ public class testDepthAtNode {
 			arbol1.depth(nodoA4);
 		});
 	}
+	@Test
+	void testNC3() {
+		assertThrows(java.lang.Exception.class, ()->{
+			arbol1.depth(null);
+		});
+	}
 }
