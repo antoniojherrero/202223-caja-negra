@@ -31,12 +31,17 @@ public class testIterator {
 	}
 	@Test
 	void testC3() {
+		int i=0;
 		lista.add("1");
-		arbol.insert("2", arbol.getRoot(), false);
+		arbol.insert("2", arbol.getRoot(), true);
 		lista.add("2");
-		arbol.insert("3", arbol.getRoot(), true);
+		arbol.insert("3", arbol.getRoot(), false);
 		lista.add("3");
-		
+		Iterator<String> itr = arbol.iterator();
+		while(itr.hasNext()) {
+			assertEquals(lista.get(i),itr.next());
+			i++;
+		}
 		
 	}
 }
