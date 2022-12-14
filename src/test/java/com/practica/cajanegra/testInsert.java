@@ -21,14 +21,14 @@ public class testInsert {
 	}
 	@Test
 	void testSR_2() {
-		Node<String> nodo = arbol.insert("1", arbol.getRoot().getLeftChild(), false);
+		Node<String> nodo = arbol.insert("a", arbol.getRoot().getLeftChild(), false);
 		assertEquals(nodo, arbol.getRoot().getLeftChild().getRightChild());
 	}
 	@Test 
 	void testSR_3(){
 		Node<String> nodo = new Node<String>("1");
 		assertThrows(java.lang.Exception.class, ()->{
-			arbol.insert("1", nodo, true);
+			arbol.insert("A", nodo, true);
 		});
 	}
 	@Test
@@ -41,13 +41,13 @@ public class testInsert {
 	void testSR_5() {
 		Node<String> nodo = new Node<String>("1");
 		assertThrows(java.lang.Exception.class, ()->{
-			arbol.insert("1", nodo, false);
+			arbol.insert("a", nodo, false);
 		});
 	}
 	@Test
 	void testSR_6() {
 		assertThrows(java.lang.Exception.class, ()->{
-			arbol.insert("1", null, false);
+			arbol.insert("A", null, false);
 		});
 	}
 	@Test
