@@ -16,7 +16,8 @@ public class testRemove {
 	@Test
 	void testC1() {
 		arbol.remove(arbol.getRoot());
-		assertNull(arbol.getRoot());
+		System.out.print(arbol.getRoot());
+		assertEquals(null,arbol.getRoot());
 	}
 	@Test
 	void testC2() {
